@@ -1,0 +1,39 @@
+service: bolivar-security-service
+
+plugins:
+  - serverless-bundle
+  - serverless-pseudo-parameters
+
+package:
+  individually: true
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 256
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+
+
+functions:
+  authorizer:
+    handler: src/handlers/auth/authorizer.handler
+
+  test-get:
+    handler: src/handlers/test/get.handler
+    events:
+      - http:
+          method: GET
+          path: /test/auth
+          authorizer: authorizer
+
+  test-get-all:
+    handler: src/handlers/test/getAll.handler
+    events:
+      - http:
+          method: GET
+          path: /test
+          
+custom:
+  bundle:
+    linting: false

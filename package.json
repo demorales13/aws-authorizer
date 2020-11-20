@@ -1,0 +1,31 @@
+{
+  "name": "bienestar-security",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "serverless-bundle": "^4.0.1",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "webpack": "^4.35.2"
+  },
+  "dependencies": {
+    "@middy/core": "^1.4.0",
+    "@middy/http-error-handler": "^1.4.0",
+    "@middy/http-event-normalizer": "^1.4.0",
+    "@middy/http-json-body-parser": "^1.4.0",
+    "@middy/validator": "^1.4.0",
+    "aws-sdk": "^2.639.0",
+    "got": "^11.8.0",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "uuid": "^8.3.1"
+  }
+}
